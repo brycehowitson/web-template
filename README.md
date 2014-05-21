@@ -1,4 +1,9 @@
+What is it
 -----------------------------------------
+
+This is my foundation for all the sites I build. I can't take credit for most of the code. I've organized the content but its all based on the work of others (HTML5 Boilerplate, Grunt, LESS CSS, etc)
+
+
 Setting up the build system for LESS
 -----------------------------------------
 
@@ -17,7 +22,6 @@ Setting up the build system for LESS
 10. Start editing files (if they're .js or .cshtml it'll reload, if they're .less it will compile + reload) 
 
 
------------------------------------------
 What it does
 -----------------------------------------
 
@@ -34,7 +38,6 @@ Current packages:
     grunt-csso     https://github.com/t32k/grunt-csso
 
 
------------------------------------------
 Future
 -----------------------------------------
 Considering adding Icon stuff
