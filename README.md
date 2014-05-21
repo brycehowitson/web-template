@@ -31,11 +31,11 @@ browser prefixed and compressed. If the Live Reloaded browser plugin exists it w
 also reload your page with the newest compiled CSS
 
 Current packages:
-1. grunt-contrib-less    https://github.com/gruntjs/grunt-contrib-less
-2. grunt-contrib-watch    https://github.com/gruntjs/grunt-contrib-watch
-3. grunt-contrib-concat    https://github.com/gruntjs/grunt-contrib-concat
-4. grunt-autoprefixer    https://github.com/nDmitry/grunt-autoprefixer
-5. grunt-csso     https://github.com/t32k/grunt-csso
+* grunt-contrib-less    https://github.com/gruntjs/grunt-contrib-less
+* grunt-contrib-watch    https://github.com/gruntjs/grunt-contrib-watch
+* grunt-contrib-concat    https://github.com/gruntjs/grunt-contrib-concat
+* grunt-autoprefixer    https://github.com/nDmitry/grunt-autoprefixer
+* grunt-csso     https://github.com/t32k/grunt-csso
 
 
 Future
