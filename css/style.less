@@ -1,21 +1,26 @@
-// Import handy LESS Mixins
-@import "mixins.less";
-
 // Import CSS Normalize - This replaces Eric Meyer's Reset 7-6-2012
 @import "normalize.css";
 
 // style the chromeframe message if it gets used
-// chrome frame was depricated by Google but still exists in some places
+// chrome frame was depricated by Google but still exists in some places including this template
 .chromeframe { margin: 0.2em 0; background: #ccc; color: black; padding: 0.2em 0; }
 
 
 /* =========================================================================================================================
 *	@FONT-FACE EMBEDDING
 *
-*	be sure to put relevant font files inside the /fonts folder and change links approprately -- below is an example of the proper format
+*	be sure to put relevant font files inside the /fonts folder and change links approprately 
+*   below is an example using Open Sans from Google Fonts
 *	========================================================================================================================= */
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800,300);
 
 .font-base { font-style: normal; font-weight: normal; font-variant: normal; text-transform: none; -webkit-font-smoothing: antialiased; }
+.font-open-sans { font-family: "Open Sans", Helvetica, Arial, sans-serif; }
+.font-OS-light { .font-base(); .font-open-sans(); font-weight: 300; }
+.font-OS-regular { .font-base(); .font-open-sans(); font-weight: 400; }
+.font-OS-medium { .font-base(); .font-open-sans(); font-weight: 600; }
+.font-OS-bold { .font-base(); .font-open-sans(); font-weight: 700; }
+.font-OS-heavy { .font-base(); .font-open-sans(); font-weight: 800; }
 
 
 /* =========================================================================================================================
@@ -26,18 +31,20 @@
 *	========================================================================================================================= */
 
 
-/* -----  Basic Colors use LESS ----- */
+/* -----  Basic Colors & default sizing use LESS ----- */
 
 @action-color: #FF5E99;
 @actionHover-color: #FF5E99;
 @text-color: #333333;
 @error-color:#cc0000;
 
+@normal-size: 10px;
+
 /* -----  Basic styling  ----- */
 html { height:100%; }
 body {color: @text-color; height: 100%;} /* base font family, size, color, etc */
 
-a, a:active, a:visited { }
+a, a:active, a:visited { color: @action-color; }
 
 a:hover { text-decoration: none;  }
 a.externalLink {} /* links that go off site */

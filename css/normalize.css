@@ -66,16 +66,24 @@ label span { vertical-align: middle; }
 /* Bicubic resizing for non-native sized IMG: */
 .ie7 img { -ms-interpolation-mode: bicubic; }
 
-/* Style select color highlight - Currently Catalyst Green */
-::-moz-selection{ background: #70dd2e; color:#fff; text-shadow: none; }
-::selection { background:#70dd2e; color:#fff; text-shadow: none; } 
+/* Style select color highlight - uncomment to use */
+// ::-moz-selection{ background: #70dd2e; color:#fff; text-shadow: none; }
+// ::selection { background:#70dd2e; color:#fff; text-shadow: none; } 
 
 /* universal selectors to fix a few common issues */
-* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; } /* fix the stupid broken box model */
-* { position: relative; } /* testing this one to see if we like it */
-* { vertical-align: middle; } /* Most things don't care about this but those that do are a pain in the #$%$#&  */
-/* * { -webkit-transition: all 0.18s ease-out; transition: all 0.18s ease-out; } */ /*This has the potential to destroy browser performance - use with caution!*/
+
+/* apply a natural box layout model to all elements, but allowing components to change */
+/* set all elements to position relative */
+* { position: relative; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; } /* testing this one to see if we like it */
+
+html {
+  box-sizing: border-box;
+}
+*:before, *:after {
+  box-sizing: inherit;
+}
+
+html, body { height:100%; }
 
 /* Prevent iOS, WinMobile from adjusting font size */
 html { -webkit-text-size-adjust:none; -ms-text-size-adjust:none; } 
-}
