@@ -12,22 +12,24 @@ module.exports = function(grunt) {
         }
       }
     },
-    // vendor prefixing
-    autoprefixer: {
-        options: {},
-        files: {
-          src: './css/style.css'
-        }
-    },
-    // compress and minify
-    csso: {
-      compress: {
-        options: {
-          report: 'min'
+    
+    postcss: {
+      options: {
+        map: {
+            inline: false, // save all sourcemaps as separate files...
+            annotation: './css/' // ...to the specified directory
         },
-        files: {
-          "./css/style.css": ["./css/style.css"]
-        }
+
+        processors: [
+          require('autoprefixer-core')({browsers: 'last 3 versions'}), // add vendor prefixes
+          require('cssnano')({
+            zindex: false,
+            autoprefixer: false
+          }) // minify the result
+        ]
+      },
+      dist: {
+        src: './css/style.css'
       }
     },
 
@@ -39,7 +41,7 @@ module.exports = function(grunt) {
       css: {
         // Which files to watch (all .less files recursively in the less directory)
         files: ['./css/**/*.less'],
-        tasks: ['less', 'autoprefixer', 'csso'],
+        tasks: ['less', 'postcss'],
         options: {
           nospawn: true
         }
@@ -56,8 +58,7 @@ module.exports = function(grunt) {
   });
  
   grunt.loadNpmTasks('grunt-contrib-less');
-  grunt.loadNpmTasks('grunt-autoprefixer');
-  grunt.loadNpmTasks('grunt-csso');
+  grunt.loadNpmTasks('grunt-postcss');
   grunt.loadNpmTasks('grunt-contrib-watch');
  
   grunt.registerTask('default', ['watch']);

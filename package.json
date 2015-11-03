@@ -1,6 +1,6 @@
 {
   "name": "basicBuild",
-  "version": "0.0.0",
+  "version": "1.5.0",
   "description": "basic setup",
   "main": "Gruntfile.js",
   "scripts": {
@@ -9,11 +9,15 @@
   "author": "Bryce Howitson",
   "license": "BSD-2-Clause",
   "devDependencies": {
+    "autoprefixer-core": "^6.0.1",
+    "cssnano": "^3.3.2",
     "grunt": "~0.4.5",
+    "grunt-contrib-concat": "~0.5.1",
     "grunt-contrib-less": "~1.0.1",
     "grunt-contrib-watch": "~0.6.1",
-    "grunt-contrib-concat": "~0.5.1",
-    "grunt-autoprefixer": "~3.0.3",
-    "grunt-csso": "~0.7.1"
+    "grunt-postcss": "^0.7.0"
+  },
+  "dependencies": {
+    "latest": "~0.2.0"
   }
 }
