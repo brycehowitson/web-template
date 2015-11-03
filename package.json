@@ -9,6 +9,8 @@
   "author": "Bryce Howitson",
   "license": "BSD-2-Clause",
   "devDependencies": {
+    "postcss": "^5.0.10",
+    "cssgrace": "~2.0.2",
     "autoprefixer": "^6.0.1",
     "cssnano": "^3.3.2",
     "grunt": "~0.4.5",

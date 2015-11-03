@@ -21,7 +21,11 @@ module.exports = function(grunt) {
         },
 
         processors: [
-          require('autoprefixer')({browsers: 'last 3 versions'}), // add vendor prefixes
+          require('cssgrace'), // IE fallbacks
+          require('autoprefixer')({
+            browsers: 'last 3 versions', // add vendor prefixes
+            remove: false // doesn't strip un-needed prefixes - only use with new code.
+          }), 
           require('cssnano')({
             zindex: false,
             autoprefixer: false
