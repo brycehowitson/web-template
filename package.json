@@ -9,7 +9,7 @@
   "author": "Bryce Howitson",
   "license": "BSD-2-Clause",
   "devDependencies": {
-    "autoprefixer-core": "^6.0.1",
+    "autoprefixer": "^6.0.1",
     "cssnano": "^3.3.2",
     "grunt": "~0.4.5",
     "grunt-contrib-concat": "~0.5.1",

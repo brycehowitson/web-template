@@ -21,7 +21,7 @@ module.exports = function(grunt) {
         },
 
         processors: [
-          require('autoprefixer-core')({browsers: 'last 3 versions'}), // add vendor prefixes
+          require('autoprefixer')({browsers: 'last 3 versions'}), // add vendor prefixes
           require('cssnano')({
             zindex: false,
             autoprefixer: false
@@ -52,6 +52,13 @@ module.exports = function(grunt) {
         tasks: [],
         options: {
           nospawn: true
+        }
+      },
+      // Force Grunt to restart if the config changes
+      configFiles: {
+        files: [ 'Gruntfile.js', 'config/*.js' ],
+        options: {
+          reload: true
         }
       }
     }
