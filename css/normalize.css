@@ -56,6 +56,7 @@ td { vertical-align: top; }
 label input[type="checkbox"],label input[type="radio"] { top: 0; vertical-align: middle; }
 label span { vertical-align: middle; }
 
+input, textarea, select, a { outline: none; }
 
 
 /* Remove Styling from any list with a "layout" class or inside an HTML5 Nav element */
