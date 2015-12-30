@@ -14,13 +14,10 @@
 	<!--  Mobile Viewport Fix-->
 	<meta name="viewport" content="width=device-width,initial-scale=1">
 	
-	
 	<!-- Place favicon.ico and apple-touch-icon.png in the root of your domain and delete these references -->
 	<link rel="shortcut icon" href="/favicon.ico">
 	<link rel="apple-touch-icon" href="/apple-touch-icon.png">
-	
-	
-	<!-- CSS : implied media="all" -->
+
 	<link rel="stylesheet" href="css/style.css?v=1">
 
 	<!-- Diagnostic CSS enable this if you need help tracking down a problem -->
@@ -40,12 +37,9 @@
 	<!-- Javascript at the bottom for fast page loading -->
 	
 	  <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
-  	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-  	<script>window.jQuery || document.write('<script src="js/libs/jquery-1.9.1.min.js"><\/script>')</script>
-	
-	<!-- <script src="js/jquery.extensions.js?v=1"></script>
-	<script src="js/plugins.js?v=1"></script> -->
-	<script src="js/libs/snap.svg-min.js"></script>
+  	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  	<script>window.jQuery || document.write('<script src="js/libs/jquery-1.11.3.min.js"><\/script>')</script>
+
 	<script src="js/script.js?v=1"></script>
 	
 	
