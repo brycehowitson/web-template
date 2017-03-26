@@ -37,8 +37,9 @@ module.exports = function(grunt) {
       }
     },
 
-    watch: {
+    chokidar: {
       options: {
+        interval: 600,
         livereload: true
       },
 
@@ -52,7 +53,7 @@ module.exports = function(grunt) {
       },
       // Page will reload for changes to the following file types too
       otherFiles: {
-        files: ['./**/*.php', './**/*.html', './**/*.htm'],
+        files: ['./**/*.php', './**/*.html', './**/*.htm', '!node_modules/**/*.*'],
         tasks: [],
         options: {
           nospawn: true
@@ -70,7 +71,7 @@ module.exports = function(grunt) {
  
   grunt.loadNpmTasks('grunt-contrib-less');
   grunt.loadNpmTasks('grunt-postcss');
-  grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-chokidar');
  
-  grunt.registerTask('default', ['watch']);
+  grunt.registerTask('default', ['chokidar']);
 };
