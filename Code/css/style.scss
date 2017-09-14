@@ -33,18 +33,18 @@
 
 /* -----  Basic Colors & default sizing use LESS ----- */
 
-@action-color: #FF5E99;
-@actionHover-color: #FF5E99;
-@text-color: #333333;
-@error-color:#cc0000;
+$action-color: #FF5E99;
+$actionHover-color: #FF5E99;
+$text-color: #333333;
+$error-color:#cc0000;
 
-@normal-size: 10px;
+$normal-size: 10px;
 
 /* -----  Basic styling  ----- */
 html { height:100%; }
-body {color: @text-color; height: 100%;} /* base font family, size, color, etc */
+body {color: $text-color; height: 100%;} /* base font family, size, color, etc */
 
-a, a:active, a:visited { color: @action-color; }
+a, a:active, a:visited { color: $action-color; }
 
 a:hover { text-decoration: none;  }
 a.externalLink {} /* links that go off site */
@@ -94,7 +94,7 @@ select optgroup option {}
 button {}
 
 
-.error {font-style: italic; color: @error-color; font-size: 14px; 
+.error {font-style: italic; color: $error-color; font-size: 14px; 
 	span { font-weight: bold; }
 	li { text-align: center; font-size: 12px; padding: 5px; }
 } /* use for validation error messages */
@@ -111,7 +111,7 @@ input:-moz-placeholder { color:#999; font:99% sans-serif; }
 input:required:invalid, input:focus:invalid { -moz-box-shadow: none; /* Removes default delete if using own shadow */ }
 input:required:valid, input:focus:valid { }
 
-input:focus:invalid { border: 1px solid @error-color; color: @error-color; }
+input:focus:invalid { border: 1px solid $error-color; color: $error-color; }
 input:required:valid, input:focus:valid { color:green; border: 1px solid green; }
 
 

@@ -24,7 +24,7 @@ I hate rewriting the same code each time I start a project. So I'm combining ide
 * Structure for embedding web fonts as files
 * Template for both legacy browser support and modern browsers
 * Grunt script automation on file save
-  * Scss to CSS compile
+  * [Scss](http://sass-lang.com/guide) to CSS compile
   * CSS prefixer
   * PostCSS formatting
   * Minification (defaults off)
@@ -68,18 +68,19 @@ I hate rewriting the same code each time I start a project. So I'm combining ide
 **What it does**
 
 Grunt scripts do stuff to your base code. In this case it watches your project
-directory and any time a LESS file is changed, that file will be compiled to CSS, which is then browser prefixed and compressed. If the Live Reloaded browser plugin exists it will also reload your page with the newest compiled CSS
+directory and any time a SCSS file is changed, that file will be compiled to CSS, which is then browser prefixed and compressed. If the Live Reloaded browser plugin exists it will also reload your page with the newest compiled CSS
 
 CSS is transformed with Javascript using PostCSS for IE compatibility, vendor prefixes and minification.
 
 **Current packages:**
 
-* grunt-contrib-less    https://github.com/gruntjs/grunt-contrib-less
-* grunt-contrib-watch    https://github.com/gruntjs/grunt-contrib-watch
+* grunt-chokidar
 * grunt-contrib-concat    https://github.com/gruntjs/grunt-contrib-concat
+* PostCSS     https://github.com/postcss/postcss
 * PostCSS autoprefixer     https://github.com/postcss/autoprefixer
 * PostCSS CSSGrace     https://github.com/cssdream/cssgrace
 * CSS Nano     http://cssnano.co/
+* Node Sass     https://github.com/sass/node-sass
 
 
 Future
