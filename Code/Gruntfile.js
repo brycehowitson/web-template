@@ -13,6 +13,17 @@ module.exports = function(grunt) {
       }
     },
     
+    sass: {
+        options: {
+            sourceMap: true
+        },
+        dist: {
+            files: {
+                './css/style.css': './css/style.scss'
+            }
+        }
+    },
+
     postcss: {
       options: {
         map: {
@@ -24,7 +35,7 @@ module.exports = function(grunt) {
           require('cssgrace'), // IE fallbacks
           require('autoprefixer')({
             browsers: 'last 3 versions', // add vendor prefixes
-            remove: false // doesn't strip un-needed prefixes - only use with new code.
+            remove: true // doesn't strip un-needed prefixes - only use with new code.
           }), 
           require('cssnano')({
             zindex: false,
@@ -44,9 +55,8 @@ module.exports = function(grunt) {
       },
 
       css: {
-        // Which files to watch (all .less files recursively in the less directory)
-        files: ['./css/**/*.less'],
-        tasks: ['less', 'postcss'],
+        files: ['./css/**/*.scss'],
+        tasks: ['sass', 'postcss'],
         options: {
           nospawn: true
         }
@@ -69,7 +79,7 @@ module.exports = function(grunt) {
     }
   });
  
-  grunt.loadNpmTasks('grunt-contrib-less');
+  grunt.loadNpmTasks('grunt-sass');
   grunt.loadNpmTasks('grunt-postcss');
   grunt.loadNpmTasks('grunt-chokidar');
  
