@@ -62,7 +62,7 @@ I hate rewriting the same code each time I start a project. So I'm combining ide
 9. Wait for dependencies to install
 10. prompt> grunt (this will start the file watcher)
 11. Activate browser plugin
-12. Start editing files (if they're .html, .htm, or .php it'll reload, if they're .less it will compile + reload) 
+12. Start editing files (if they're .html, .htm, or .php it'll reload, if they're .scss it will compile + reload) 
 
 
 **What it does**

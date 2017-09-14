@@ -7,28 +7,28 @@
 
 
 /* =========================================================================================================================
-*	@FONT-FACE EMBEDDING
+* @FONT-FACE EMBEDDING
 *
-*	be sure to put relevant font files inside the /fonts folder and change links approprately 
+* be sure to put relevant font files inside the /fonts folder and change links approprately 
 *   below is an example using Open Sans from Google Fonts
-*	========================================================================================================================= */
+* ========================================================================================================================= */
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800,300);
 
-.font-base { font-style: normal; font-weight: normal; font-variant: normal; text-transform: none; -webkit-font-smoothing: antialiased; }
-.font-open-sans { font-family: "Open Sans", Helvetica, Arial, sans-serif; }
-.font-OS-light { .font-base(); .font-open-sans(); font-weight: 300; }
-.font-OS-regular { .font-base(); .font-open-sans(); font-weight: 400; }
-.font-OS-medium { .font-base(); .font-open-sans(); font-weight: 600; }
-.font-OS-bold { .font-base(); .font-open-sans(); font-weight: 700; }
-.font-OS-heavy { .font-base(); .font-open-sans(); font-weight: 800; }
+%font-base { font-style: normal; font-weight: normal; font-variant: normal; text-transform: none; -webkit-font-smoothing: antialiased; }
+%font-open-sans { font-family: "Open Sans", Helvetica, Arial, sans-serif; }
+%font-OS-light { @extend %font-base; @extend %font-open-sans; font-weight: 300; }
+%font-OS-regular { @extend %font-base; @extend %font-open-sans; font-weight: 400; }
+%font-OS-medium { @extend %font-base; @extend %font-open-sans; font-weight: 600; }
+%font-OS-bold { @extend %font-base; @extend %font-open-sans; font-weight: 700; }
+%font-OS-heavy { @extend %font-base; @extend %font-open-sans; font-weight: 800; }
 
 
 /* =========================================================================================================================
-*	We're done with all the resets & utility classes:
-*	ADD GLOBAL SITE STYELS HERE - See your changes right away in elements.html
+* We're done with all the resets & utility classes:
+* ADD GLOBAL SITE STYELS HERE - See your changes right away in elements.html
 *
-*	be general with these. We want to allow as much recycling as possible
-*	========================================================================================================================= */
+* be general with these. We want to allow as much recycling as possible
+* ========================================================================================================================= */
 
 
 /* -----  Basic Colors & default sizing use LESS ----- */
@@ -39,6 +39,7 @@ $text-color: #333333;
 $error-color:#cc0000;
 
 $normal-size: 10px;
+
 
 /* -----  Basic styling  ----- */
 html { height:100%; }
@@ -95,8 +96,8 @@ button {}
 
 
 .error {font-style: italic; color: $error-color; font-size: 14px; 
-	span { font-weight: bold; }
-	li { text-align: center; font-size: 12px; padding: 5px; }
+  span { font-weight: bold; }
+  li { text-align: center; font-size: 12px; padding: 5px; }
 } /* use for validation error messages */
 
 .field-validation-valid {  }
@@ -123,19 +124,19 @@ aside {}
 
 
 /* =========================================================================================================================
-*	ADD PAGE SPECIFIC OR SPECIALTY STYLES HERE
+* ADD PAGE SPECIFIC OR SPECIALTY STYLES HERE
 *
-*	be specific with these (only use them where needed)
-*	========================================================================================================================= */
+* be specific with these (only use them where needed)
+* ========================================================================================================================= */
 
 
 
 
 /* =========================================================================================================================
-*	MEDIA QUERIES FOR PRINT AND MOBILE DEVICES
+* MEDIA QUERIES FOR PRINT AND MOBILE DEVICES
 *
-*	inlined to avoid required HTTP connection
-*	========================================================================================================================= */
+* inlined to avoid required HTTP connection
+* ========================================================================================================================= */
 
 /* Smartphones (portrait and landscape) ----------- */
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
