@@ -18,7 +18,7 @@
     "grunt-postcss": "^0.9.0",
     "grunt-sass": "^3.0.2",
     "node-sass": "^4.12.0",
-    "postcss": "^7.0.17"
+    "postcss": "^8.2.10"
   },
   "dependencies": {
     "latest": "~0.2.0"
