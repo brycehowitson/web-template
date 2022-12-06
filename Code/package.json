@@ -13,7 +13,7 @@
     "cssgrace": "~3.0.0",
     "cssnano": "^4.1.10",
     "grunt": "~1.0.4",
-    "grunt-chokidar": "^1.0.1",
+    "grunt-chokidar": "^1.0.2",
     "grunt-contrib-concat": "~1.0.1",
     "grunt-postcss": "^0.9.0",
     "grunt-sass": "^3.0.2",
